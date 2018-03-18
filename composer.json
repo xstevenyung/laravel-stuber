@@ -1,0 +1,24 @@
+{
+    "name": "stevenyung/laravel-stuber",
+    "description": "A package to write your own Laravel stub.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Steven Yung",
+            "email": "stevenyung@icloud.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "StvnYung\\LaravelStuber\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "StvnYung\\LaravelStuber\\StuberServiceProvider"
+            ]
+        }
+    }
+}
