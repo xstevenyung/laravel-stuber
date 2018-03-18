@@ -10,7 +10,7 @@ This package will require Laravel 5.5 and higher.
 
 Install the package:
 ```
-composer require stvnyung/laravel-stuber
+composer require --dev stvnyung/laravel-stuber
 ```
 
 Then create a stubs directory at the root of your Laravel project:
