@@ -8,9 +8,9 @@ This package will require Laravel 5.5 and higher.
 
 ## Getting Started
 
-Install the package:
+Install the package (only the dev version is available for now):
 ```
-composer require --dev stvnyung/laravel-stuber
+composer require --dev stvnyung/laravel-stuber "dev-master"
 ```
 
 Then create a stubs directory at the root of your Laravel project:
