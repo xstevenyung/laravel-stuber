@@ -13,12 +13,7 @@ Install the package (only the dev version is available for now):
 composer require --dev stvnyung/laravel-stuber "dev-master"
 ```
 
-Then create a stubs directory at the root of your Laravel project:
-```
-mkdir stubs
-```
-
-Finally create any stub files that you want to override (a job for example):
+Create any stub files that you want to override (a job for example):
 ```
 php artisan make:stub job
 ```
