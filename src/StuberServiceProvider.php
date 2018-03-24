@@ -2,17 +2,15 @@
 
 namespace StvnYung\LaravelStuber;
 
-use Illuminate\Support\ServiceProvider;
+use StvnYung\LaravelStuber\Commands\JobMakeCommand;
+use Illuminate\Foundation\Providers\ArtisanServiceProvider;
 
-class StuberServiceProvider extends ServiceProvider
+class StuberServiceProvider extends ArtisanServiceProvider
 {
-    public function boot()
+    protected function registerJobMakeCommand()
     {
-        //
-    }
-
-    public function register()
-    {
-        //
+        $this->app->singleton('command.job.make', function ($app) {
+            return new JobMakeCommand($app['files']);
+        });
     }
 }
