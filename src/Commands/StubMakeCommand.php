@@ -23,9 +23,6 @@ class StubMakeCommand extends GeneratorCommand
         return $rootNamespace.'\Stubs';
     }
 
-    /**
-     * Override getPath to include the right extension
-     */
     protected function getPath($name)
     {
         $name = Str::replaceFirst($this->rootNamespace(), '', $name);
@@ -33,19 +30,8 @@ class StubMakeCommand extends GeneratorCommand
         return $this->laravel['path'].'/'.str_replace('\\', '/', $name).'.stub';
     }
 
-    /**
-     * Prevent replacing namespaces on the stub
-     */
-    protected function replaceNamespace(&$stub, $name)
+    protected function buildClass($name)
     {
-        return $this;
-    }
-
-    /**
-     * Prevent replacing calsses on the stub
-     */
-    protected function replaceClass($stub, $name)
-    {
-        return $stub;
+        return $this->files->get($this->getStub());
     }
 }
