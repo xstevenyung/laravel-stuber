@@ -13,8 +13,22 @@ class StubMakeCommand extends GeneratorCommand
 
     protected $type = 'Stub';
 
+    protected $stubs = [
+        'console', 'event-handler-queued', 'event-handler', 'event',
+        'exception-render-report', 'exception-render', 'exception-report',
+        'exception', 'job-queued', 'job', 'listener-duck', 'listener-queued-duck',
+        'listener-queued', 'listener', 'mail', 'markdown-mail', 'markdown-notification',
+        'markdown', 'model', 'notification', 'pivot.model', 'policy.plain',
+        'policy', 'provider', 'request', 'resource-collection', 'resource',
+        'routes', 'rule', 'test', 'unit-test',
+    ];
+
     protected function getStub()
     {
+        if (! in_array($this->getNameInput(), $this->stubs)) {
+            throw new StubNotFound("Stub {$this->getNameInput()} not found.");
+        }
+
         return __DIR__."/stubs/{$this->getNameInput()}.stub";
     }
 
