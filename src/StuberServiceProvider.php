@@ -13,6 +13,7 @@ class StuberServiceProvider extends ArtisanServiceProvider
 
         $this->commands([
             \StvnYung\LaravelStuber\Commands\StubMakeCommand::class,
+            \StvnYung\LaravelStuber\Commands\StubListCommand::class,
         ]);
     }
 
