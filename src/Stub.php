@@ -7,7 +7,7 @@ class Stub
     public static function list()
     {
         return [
-            ['type' => 'Job', 'name' => 'job'],
+            ['type' => 'Sync Job', 'name' => 'job'],
         ];
     }
 
