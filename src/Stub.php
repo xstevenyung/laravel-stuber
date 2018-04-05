@@ -8,6 +8,7 @@ class Stub
     {
         return [
             ['type' => 'Sync Job', 'name' => 'job'],
+            ['type' => 'Queueable Job', 'name' => 'job-queue'],
         ];
     }
 
