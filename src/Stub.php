@@ -8,7 +8,6 @@ class Stub
     {
         return [
             ['type' => 'Job', 'name' => 'job'],
-            ['type' => 'Test', 'name' => 'test'],
         ];
     }
 
