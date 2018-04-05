@@ -11,7 +11,8 @@
     "require": {
         "illuminate/filesystem": "^5.6",
         "illuminate/console": "^5.6",
-        "laravel-zero/foundation": "^5.6"
+        "laravel-zero/foundation": "^5.6",
+        "illuminate/support": "^5.6"
     },
     "autoload": {
         "psr-4": {
