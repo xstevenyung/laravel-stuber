@@ -3,6 +3,8 @@
 namespace StvnYung\LaravelStuber\Commands;
 
 use Illuminate\Console\Command;
+use StvnYung\LaravelStuber\Stub;
+use Illuminate\Filesystem\Filesystem;
 
 class StubListCommand extends Command
 {
@@ -12,9 +14,14 @@ class StubListCommand extends Command
 
     protected $headers = ['Type', 'Name'];
 
-    protected $stubs = [
-        ['Job', 'job'],
-    ];
+    protected $stubs;
+
+    public function __construct(Filesystem $files)
+    {
+        $this->stubs = Stub::list();
+
+        parent::__construct($files);
+    }
 
     public function handle() : void
     {
