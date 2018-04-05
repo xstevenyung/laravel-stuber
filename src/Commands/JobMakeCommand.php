@@ -8,10 +8,12 @@ class JobMakeCommand extends BaseJobMakeCommand
 {
     public function getStub()
     {
-        if (! $this->files->exists('app/Stubs/job.stub')) {
-            return parent::getStub();
-        }
+        $original = parent::getStub();
 
-        return app_path('Stubs/job.stub');
+        $filename = collect(explode('/', $original))->last();
+
+        return $this->files->exists($override = app_path("/Stubs/{$filename}"))
+            ? $override
+            : $original;
     }
 }
