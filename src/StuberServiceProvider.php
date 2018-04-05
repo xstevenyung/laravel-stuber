@@ -2,8 +2,10 @@
 
 namespace StvnYung\LaravelStuber;
 
-use StvnYung\LaravelStuber\Commands\JobMakeCommand;
 use Illuminate\Foundation\Providers\ArtisanServiceProvider;
+use StvnYung\LaravelStuber\Commands\{
+    JobMakeCommand, StubMakeCommand, StubListCommand
+};
 
 class StuberServiceProvider extends ArtisanServiceProvider
 {
@@ -12,8 +14,8 @@ class StuberServiceProvider extends ArtisanServiceProvider
         parent::register();
 
         $this->commands([
-            \StvnYung\LaravelStuber\Commands\StubMakeCommand::class,
-            \StvnYung\LaravelStuber\Commands\StubListCommand::class,
+            StubMakeCommand::class,
+            StubListCommand::class,
         ]);
     }
 
