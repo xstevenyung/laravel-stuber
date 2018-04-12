@@ -3,9 +3,9 @@
 namespace StvnYung\LaravelStuber\Commands\Overrides;
 
 use StvnYung\LaravelStuber\Concerns\OverridableMakeCommand;
-use Illuminate\Foundation\Console\ListenerMakeCommand as BaseListenerMakeCommand;
+use Illuminate\Foundation\Console\MailMakeCommand as BaseMailMakeCommand;
 
-class ListenerMakeCommand extends BaseListenerMakeCommand
+class MailMakeCommand extends BaseMailMakeCommand
 {
     use OverridableMakeCommand;
 
