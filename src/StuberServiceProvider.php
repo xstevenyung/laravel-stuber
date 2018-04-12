@@ -2,25 +2,27 @@
 
 namespace StvnYung\LaravelStuber;
 
+use StvnYung\LaravelStuber\Commands\JobMakeCommand;
+use StvnYung\LaravelStuber\Commands\StubListCommand;
+use StvnYung\LaravelStuber\Commands\StubMakeCommand;
 use Illuminate\Foundation\Providers\ArtisanServiceProvider;
-use StvnYung\LaravelStuber\Commands\{
-    JobMakeCommand, StubMakeCommand, StubListCommand
-};
-use StvnYung\LaravelStuber\Commands\Overrides\{
-    ConsoleMakeCommand, EventMakeCommand, ExceptionMakeCommand,
-    ListenerMakeCommand, MailMakeCommand, NotificationMakeCommand
-};
-use StvnYung\LaravelStuber\Commands\Overrides\ModelMakeCommand;
-use StvnYung\LaravelStuber\Commands\Overrides\PolicyMakeCommand;
-use StvnYung\LaravelStuber\Commands\Overrides\ProviderMakeCommand;
-use StvnYung\LaravelStuber\Commands\Overrides\RequestMakeCommand;
-use StvnYung\LaravelStuber\Commands\Overrides\ResourceMakeCommand;
+use StvnYung\LaravelStuber\Commands\Overrides\MailMakeCommand;
 use StvnYung\LaravelStuber\Commands\Overrides\RuleMakeCommand;
 use StvnYung\LaravelStuber\Commands\Overrides\TestMakeCommand;
+use StvnYung\LaravelStuber\Commands\Overrides\EventMakeCommand;
+use StvnYung\LaravelStuber\Commands\Overrides\ModelMakeCommand;
+use StvnYung\LaravelStuber\Commands\Overrides\PolicyMakeCommand;
+use StvnYung\LaravelStuber\Commands\Overrides\SeederMakeCommand;
+use StvnYung\LaravelStuber\Commands\Overrides\ConsoleMakeCommand;
+use StvnYung\LaravelStuber\Commands\Overrides\FactoryMakeCommand;
+use StvnYung\LaravelStuber\Commands\Overrides\RequestMakeCommand;
+use StvnYung\LaravelStuber\Commands\Overrides\ListenerMakeCommand;
+use StvnYung\LaravelStuber\Commands\Overrides\ProviderMakeCommand;
+use StvnYung\LaravelStuber\Commands\Overrides\ResourceMakeCommand;
+use StvnYung\LaravelStuber\Commands\Overrides\ExceptionMakeCommand;
 use StvnYung\LaravelStuber\Commands\Overrides\ControllerMakeCommand;
 use StvnYung\LaravelStuber\Commands\Overrides\MiddlewareMakeCommand;
-use StvnYung\LaravelStuber\Commands\Overrides\FactoryMakeCommand;
-use StvnYung\LaravelStuber\Commands\Overrides\SeederMakeCommand;
+use StvnYung\LaravelStuber\Commands\Overrides\NotificationMakeCommand;
 
 class StuberServiceProvider extends ArtisanServiceProvider
 {
