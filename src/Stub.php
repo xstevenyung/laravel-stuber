@@ -25,6 +25,7 @@ class Stub
             ['type' => 'Pivot Model', 'name' => 'pivot.model'],
             ['type' => 'Policy', 'name' => 'policy.plain'],
             ['type' => 'Policy w/ CRUD', 'name' => 'policy'],
+            ['type' => 'Provider', 'name' => 'provider'],
         ];
     }
 
