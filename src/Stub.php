@@ -32,6 +32,10 @@ class Stub
             ['type' => 'Rule', 'name' => 'rule'],
             ['type' => 'Feature Test', 'name' => 'test'],
             ['type' => 'Unit Test', 'name' => 'unit-test'],
+            ['type' => 'Simple Controller', 'name' => 'controller.plain'],
+            ['type' => 'Controller w/ CRUD', 'name' => 'controller'],
+            ['type' => 'Controller w/ Model', 'name' => 'controller.model'],
+            ['type' => 'Nested Controller', 'name' => 'controller.nested'],
         ];
     }
 
