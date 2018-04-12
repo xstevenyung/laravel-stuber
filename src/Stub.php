@@ -30,6 +30,8 @@ class Stub
             ['type' => 'Resource', 'name' => 'resource'],
             ['type' => 'Resource Collection', 'name' => 'resource-collection'],
             ['type' => 'Rule', 'name' => 'rule'],
+            ['type' => 'Feature Test', 'name' => 'test'],
+            ['type' => 'Unit Test', 'name' => 'unit-test'],
         ];
     }
 

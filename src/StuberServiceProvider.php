@@ -16,6 +16,7 @@ use StvnYung\LaravelStuber\Commands\Overrides\ProviderMakeCommand;
 use StvnYung\LaravelStuber\Commands\Overrides\RequestMakeCommand;
 use StvnYung\LaravelStuber\Commands\Overrides\ResourceMakeCommand;
 use StvnYung\LaravelStuber\Commands\Overrides\RuleMakeCommand;
+use StvnYung\LaravelStuber\Commands\Overrides\TestMakeCommand;
 
 class StuberServiceProvider extends ArtisanServiceProvider
 {
@@ -117,6 +118,13 @@ class StuberServiceProvider extends ArtisanServiceProvider
     {
         $this->app->singleton('command.rule.make', function ($app) {
             return new RuleMakeCommand($app['files']);
+        });
+    }
+
+    protected function registerTestMakeCommand()
+    {
+        $this->app->singleton('command.test.make', function ($app) {
+            return new TestMakeCommand($app['files']);
         });
     }
 }
