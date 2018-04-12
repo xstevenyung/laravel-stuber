@@ -22,6 +22,7 @@ class Stub
             ['type' => 'Notification', 'name' => 'notification'],
             ['type' => 'Markdown Notification', 'name' => 'markdown-notification'],
             ['type' => 'Model', 'name' => 'model'],
+            ['type' => 'Pivot Model', 'name' => 'pivot.model'],
         ];
     }
 
