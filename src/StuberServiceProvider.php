@@ -10,6 +10,7 @@ use StvnYung\LaravelStuber\Commands\Overrides\{
     ConsoleMakeCommand, EventMakeCommand, ExceptionMakeCommand,
     ListenerMakeCommand, MailMakeCommand, NotificationMakeCommand
 };
+use StvnYung\LaravelStuber\Commands\Overrides\ModelMakeCommand;
 
 class StuberServiceProvider extends ArtisanServiceProvider
 {
@@ -69,6 +70,13 @@ class StuberServiceProvider extends ArtisanServiceProvider
     {
         $this->app->singleton('command.notification.make', function ($app) {
             return new NotificationMakeCommand($app['files']);
+        });
+    }
+
+    protected function registerModelMakeCommand()
+    {
+        $this->app->singleton('command.model.make', function ($app) {
+            return new ModelMakeCommand($app['files']);
         });
     }
 }

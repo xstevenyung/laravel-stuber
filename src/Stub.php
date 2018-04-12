@@ -21,6 +21,7 @@ class Stub
             ['type' => 'Markdown Mail Template', 'name' => 'markdown'],
             ['type' => 'Notification', 'name' => 'notification'],
             ['type' => 'Markdown Notification', 'name' => 'markdown-notification'],
+            ['type' => 'Model', 'name' => 'model'],
         ];
     }
 
