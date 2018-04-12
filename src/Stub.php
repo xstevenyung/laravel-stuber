@@ -29,6 +29,7 @@ class Stub
             ['type' => 'Request', 'name' => 'request'],
             ['type' => 'Resource', 'name' => 'resource'],
             ['type' => 'Resource Collection', 'name' => 'resource-collection'],
+            ['type' => 'Rule', 'name' => 'rule'],
         ];
     }
 
