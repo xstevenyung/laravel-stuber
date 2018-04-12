@@ -9,10 +9,7 @@
         }
     ],
     "require": {
-        "illuminate/filesystem": "^5.5",
-        "illuminate/console": "^5.5",
-        "laravel-zero/foundation": "^5.5",
-        "illuminate/support": "^5.5"
+        "laravel/framework": "^5.5"
     },
     "autoload": {
         "psr-4": {
