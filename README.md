@@ -27,10 +27,7 @@ php artisan stub:list
 
 ## Running the tests
 
-Run the tests with:
-```
-./vendor/bin/phpunit
-```
+There is no tests yet, help us make it happen !
 
 ### Coding style tests
 
