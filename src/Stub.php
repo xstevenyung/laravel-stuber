@@ -9,6 +9,18 @@ class Stub
         return [
             ['type' => 'Sync Job', 'name' => 'job'],
             ['type' => 'Queueable Job', 'name' => 'job-queue'],
+            ['type' => 'Command', 'name' => 'console'],
+            ['type' => 'Event', 'name' => 'event'],
+            ['type' => 'Exception', 'name' => 'exception'],
+            ['type' => 'Listener Duck', 'name' => 'listener-duck'],
+            ['type' => 'Listener Queued Duck', 'name' => 'listener-queued-duck'],
+            ['type' => 'Listener Queued', 'name' => 'listener-queued'],
+            ['type' => 'Listener', 'name' => 'listener'],
+            ['type' => 'Mail', 'name' => 'mail'],
+            ['type' => 'Markdown Mail', 'name' => 'markdown-mail'],
+            ['type' => 'Markdown Mail Template', 'name' => 'markdown'],
+            ['type' => 'Notification', 'name' => 'notification'],
+            ['type' => 'Markdown Notification', 'name' => 'markdown-notification'],
         ];
     }
 
