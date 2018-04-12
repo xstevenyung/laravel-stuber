@@ -11,6 +11,7 @@ use StvnYung\LaravelStuber\Commands\Overrides\{
     ListenerMakeCommand, MailMakeCommand, NotificationMakeCommand
 };
 use StvnYung\LaravelStuber\Commands\Overrides\ModelMakeCommand;
+use StvnYung\LaravelStuber\Commands\Overrides\PolicyMakeCommand;
 
 class StuberServiceProvider extends ArtisanServiceProvider
 {
@@ -77,6 +78,13 @@ class StuberServiceProvider extends ArtisanServiceProvider
     {
         $this->app->singleton('command.model.make', function ($app) {
             return new ModelMakeCommand($app['files']);
+        });
+    }
+
+    protected function registerPolicyMakeCommand()
+    {
+        $this->app->singleton('command.policy.make', function ($app) {
+            return new PolicyMakeCommand($app['files']);
         });
     }
 }
