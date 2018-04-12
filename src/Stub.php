@@ -36,6 +36,8 @@ class Stub
             ['type' => 'Controller w/ CRUD', 'name' => 'controller'],
             ['type' => 'Controller w/ Model', 'name' => 'controller.model'],
             ['type' => 'Nested Controller', 'name' => 'controller.nested'],
+            ['type' => 'Factory', 'name' => 'factory'],
+            ['type' => 'Seeder', 'name' => 'seeder'],
         ];
     }
 
