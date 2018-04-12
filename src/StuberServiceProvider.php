@@ -13,6 +13,7 @@ use StvnYung\LaravelStuber\Commands\Overrides\{
 use StvnYung\LaravelStuber\Commands\Overrides\ModelMakeCommand;
 use StvnYung\LaravelStuber\Commands\Overrides\PolicyMakeCommand;
 use StvnYung\LaravelStuber\Commands\Overrides\ProviderMakeCommand;
+use StvnYung\LaravelStuber\Commands\Overrides\RequestMakeCommand;
 
 class StuberServiceProvider extends ArtisanServiceProvider
 {
@@ -93,6 +94,13 @@ class StuberServiceProvider extends ArtisanServiceProvider
     {
         $this->app->singleton('command.provider.make', function ($app) {
             return new ProviderMakeCommand($app['files']);
+        });
+    }
+
+    protected function registerRequestMakeCommand()
+    {
+        $this->app->singleton('command.request.make', function ($app) {
+            return new RequestMakeCommand($app['files']);
         });
     }
 }

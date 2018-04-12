@@ -26,6 +26,7 @@ class Stub
             ['type' => 'Policy', 'name' => 'policy.plain'],
             ['type' => 'Policy w/ CRUD', 'name' => 'policy'],
             ['type' => 'Provider', 'name' => 'provider'],
+            ['type' => 'Request', 'name' => 'request'],
         ];
     }
 
