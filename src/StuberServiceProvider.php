@@ -23,6 +23,7 @@ use StvnYung\LaravelStuber\Commands\Overrides\ExceptionMakeCommand;
 use StvnYung\LaravelStuber\Commands\Overrides\ControllerMakeCommand;
 use StvnYung\LaravelStuber\Commands\Overrides\MiddlewareMakeCommand;
 use StvnYung\LaravelStuber\Commands\Overrides\NotificationMakeCommand;
+use StvnYung\LaravelStuber\Commands\Overrides\MigrationCreator;
 
 class StuberServiceProvider extends ArtisanServiceProvider
 {
@@ -159,6 +160,13 @@ class StuberServiceProvider extends ArtisanServiceProvider
     {
         $this->app->singleton('command.seeder.make', function ($app) {
             return new SeederMakeCommand($app['files'], $app['composer']);
+        });
+    }
+
+    protected function registerCreator()
+    {
+        $this->app->singleton('migration.creator', function ($app) {
+            return new MigrationCreator($app['files']);
         });
     }
 }

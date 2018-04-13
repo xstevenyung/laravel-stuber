@@ -38,6 +38,9 @@ class Stub
             ['type' => 'Nested Controller', 'name' => 'controller.nested'],
             ['type' => 'Factory', 'name' => 'factory'],
             ['type' => 'Seeder', 'name' => 'seeder'],
+            ['type' => 'Create Table Migration', 'name' => 'create'],
+            ['type' => 'Update Table Migration', 'name' => 'update'],
+            ['type' => 'Blank Migration', 'name' => 'blank'],
         ];
     }
 
