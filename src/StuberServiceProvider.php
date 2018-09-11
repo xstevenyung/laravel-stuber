@@ -10,6 +10,7 @@ use StvnYung\LaravelStuber\Commands\Overrides\MailMakeCommand;
 use StvnYung\LaravelStuber\Commands\Overrides\RuleMakeCommand;
 use StvnYung\LaravelStuber\Commands\Overrides\TestMakeCommand;
 use StvnYung\LaravelStuber\Commands\Overrides\EventMakeCommand;
+use StvnYung\LaravelStuber\Commands\Overrides\MigrationCreator;
 use StvnYung\LaravelStuber\Commands\Overrides\ModelMakeCommand;
 use StvnYung\LaravelStuber\Commands\Overrides\PolicyMakeCommand;
 use StvnYung\LaravelStuber\Commands\Overrides\SeederMakeCommand;
@@ -23,7 +24,6 @@ use StvnYung\LaravelStuber\Commands\Overrides\ExceptionMakeCommand;
 use StvnYung\LaravelStuber\Commands\Overrides\ControllerMakeCommand;
 use StvnYung\LaravelStuber\Commands\Overrides\MiddlewareMakeCommand;
 use StvnYung\LaravelStuber\Commands\Overrides\NotificationMakeCommand;
-use StvnYung\LaravelStuber\Commands\Overrides\MigrationCreator;
 
 class StuberServiceProvider extends ArtisanServiceProvider
 {
